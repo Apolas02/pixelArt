@@ -1,7 +1,7 @@
 window.onload = function(){
     let container = document.querySelector('#canvas');
-    // container.style.height = '200px';
-    // container.style.width = '200px';
+    container.style.height = '200px';
+    container.style.width = '200px';
     container.style.display = 'grid';
     container.style.gridTemplate = 'repeat(8, 1f) / repeat(8, 1f)'
 
