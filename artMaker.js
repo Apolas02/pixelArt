@@ -9,5 +9,9 @@ window.onload = function(){
     for (let i = 0; i < 400; i++) {
         let box = document.createElement('span');
         box.style.border = '1px solid black';
+        box.style.backgroundColor = 'white';
+
+        container.appendChild(box);
     }
+    document.body.appendChild(container);
 }
