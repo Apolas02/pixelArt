@@ -1,13 +1,13 @@
 window.onload = function(){
     let container = document.querySelector('#canvas');
-    container.style.height = '200px';
-    container.style.width = '200px';
     container.style.display = 'grid';
-    container.style.gridTemplate = 'repeat(8, 1f) / repeat(8, 1f)'
+    container.style.gridTemplate = 'repeat(20, 1f) / repeat(20, 1f)'
 
     
     for (let i = 0; i < 400; i++) {
         let box = document.createElement('span');
+        box.style.height = '8px'
+        box.style.width = '8px'
         box.style.border = '1px solid black';
         box.style.backgroundColor = 'white';
 
