@@ -7,6 +7,14 @@ body{
     height: 200px;
     width: 200px;
     margin: auto;
+    /* display: grid;
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(20,1fr); */
 }
 
+#colorPicker{
+    height: 10px;
+    width: 200px;
+    margin: auto;
+}
 
