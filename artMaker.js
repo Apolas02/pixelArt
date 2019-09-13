@@ -6,8 +6,8 @@ window.onload = function(){
     
     for (let i = 0; i < 400; i++) {
         let box = document.createElement('span');
-        box.style.height = '8px'
-        box.style.width = '8px'
+        box.style.height = '23px'
+        box.style.width = '23px'
         box.style.border = '1px solid black';
         box.style.backgroundColor = 'white';
         box.addEventListener('click', function(event){
@@ -21,13 +21,13 @@ window.onload = function(){
 
     colorPicker.style.margin = 'auto';
     colorPicker.style.display = 'grid';
-    colorPicker.style.gridTemplate = 'repeat(1, 1fr) / repeat(20, 1fr)';
-    colorPicker.style.border = '1px solid black';
+    colorPicker.style.gridTemplate = 'repeat(20, 1fr) / repeat(20, 1fr)';
+    // colorPicker.style.border = '1px solid black';
     
     for (i in colorPallet) {
         let box = document.createElement('span');
-        box.style.height = '8px'
-        box.style.width = '8px'
+        box.style.height = '23px'
+        box.style.width = '23px'
         box.style.border = '1px solid black';
         box.style.backgroundColor = colorPallet[i];
         box.addEventListener('click', function(event){
