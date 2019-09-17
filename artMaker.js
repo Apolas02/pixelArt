@@ -31,7 +31,7 @@ window.onload = function(){
 
     let colorPicker = document.querySelector('#colorPicker');
     let activeColor = 'green'
-    let colorPallet = ['black', 'brown', 'red', 'orange','yellow', 'green', 'cyan', 'blue', 'purple', 'pink']
+    let colorPallet = ['black', 'brown', 'red', 'orange','yellow', 'green', 'cyan', 'blue', 'purple', 'pink', 'white']
 
     colorPicker.style.margin = 'auto';
     colorPicker.style.display = 'grid';
