@@ -1,15 +1,15 @@
 window.onload = function(){
     let container = document.querySelector('#canvas');
     container.style.display = 'grid';
-    container.style.gridTemplate = 'repeat(20, 1fr) / repeat(20, 1fr)'
+    container.style.gridTemplate = 'repeat(100, 1fr) / repeat(100, 1fr)'
     
     
 
-    for (let i = 0; i < 400; i++) {
+    for (let i = 0; i < 10000; i++) {
         let box = document.createElement('span');
-        box.style.height = '23px'
-        box.style.width = '23px'
-        box.style.border = '1px solid black';
+        box.style.height = '5px'
+        box.style.width = '5px'
+        box.style.border = '0px solid black';
         box.style.backgroundColor = 'white';
         let mouseState = 0
 
