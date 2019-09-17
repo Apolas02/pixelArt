@@ -4,6 +4,7 @@ window.onload = function(){
     container.style.gridTemplate = 'repeat(20, 1fr) / repeat(20, 1fr)'
     
     
+
     for (let i = 0; i < 400; i++) {
         let box = document.createElement('span');
         box.style.height = '23px'
@@ -11,18 +12,19 @@ window.onload = function(){
         box.style.border = '1px solid black';
         box.style.backgroundColor = 'white';
         let mouseState = 0
-        box.addEventListener('onmousedown', function(event){
+
+        this.addEventListener('mousedown', function(){
             mouseState = 1;
         });
-        box.addEventListener('onmouseup', function(event){
+        this.addEventListener('mouseup', function(){
             mouseState = 0;
         });
-        if (mouseState === 1){
-            box.addEventListener('mouseover', function(event){
-                box.style.backgroundColor = activeColor;
-            });
-        }
-        consoleLog(mouseState)
+        box.addEventListener('mouseover', function(){
+            if (mouseState === 1){
+            box.style.backgroundColor = activeColor;
+            }
+        });
+        
         container.appendChild(box); 
     }
     
@@ -52,6 +54,5 @@ window.onload = function(){
 
     document.body.appendChild(container);
     document.body.appendChild(colorPicker);
-
 
 }
