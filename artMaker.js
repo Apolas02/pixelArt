@@ -2,7 +2,7 @@ window.onload = function(){
     let container = document.querySelector('#canvas');
     container.style.display = 'grid';
     container.style.gridTemplate = 'repeat(20, 1fr) / repeat(20, 1fr)'
-
+    
     
     for (let i = 0; i < 400; i++) {
         let box = document.createElement('span');
@@ -10,11 +10,23 @@ window.onload = function(){
         box.style.width = '23px'
         box.style.border = '1px solid black';
         box.style.backgroundColor = 'white';
-        box.addEventListener('click', function(event){
-            box.style.backgroundColor = activeColor;
+        let mouseState = 0
+        box.addEventListener('onmousedown', function(event){
+            mouseState = 1;
         });
-        container.appendChild(box);
+        box.addEventListener('onmouseup', function(event){
+            mouseState = 0;
+        });
+        if (mouseState === 1){
+            box.addEventListener('mouseover', function(event){
+                box.style.backgroundColor = activeColor;
+            });
+        }
+        consoleLog(mouseState)
+        container.appendChild(box); 
     }
+    
+
     let colorPicker = document.querySelector('#colorPicker');
     let activeColor = 'green'
     let colorPallet = ['black', 'brown', 'red', 'orange','yellow', 'green', 'cyan', 'blue', 'purple', 'pink']
